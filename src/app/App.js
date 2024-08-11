@@ -24,7 +24,14 @@ function App() {
         "
         id="quote-box"
       >
-        <div className="bg-neutral-50 rounded-md p-4 mb-4 shadow-sm shadow-neutral-50 md:w-3/4 lg:w-2/3 xl:w-1/2">
+        <div className="
+          bg-neutral-50
+          rounded-md
+          p-4 sm:p-5 md:p-6 lg:p-7 xl:p-8
+          mb-4
+          shadow-sm shadow-neutral-50
+          md:w-3/4 lg:w-2/3 xl:w-1/2
+        ">
           <figure className="mb-10">
             <blockquote id="text" className="mb-4">
               <div className="mb-2 text-3xl md:text-4xl lg:text-5xl font-bold">
@@ -44,6 +51,7 @@ function App() {
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(quote)}`}
               target="_blank"
               rel="noopener noreferrer"
+              title="Tweet this quote"
             >
               <TwitterIcon />
             </a>
@@ -65,6 +73,7 @@ function App() {
               "
               id="new-quote"
               type="button"
+              title="Display a new quote"
             >
               Quotesso!
             </button>
