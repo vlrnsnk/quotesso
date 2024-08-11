@@ -1,10 +1,13 @@
 import './App.css';
 import { ReactComponent as TwitterIcon } from '../assets/twitter.svg';
 import { ReactComponent as QuoteMark } from '../assets/quote.svg';
+import { quotes } from '../mocks/quotes';
 
 function App() {
-  const quote = `I can't change the direction of the wind, but I can adjust my sails to always reach my destination.`;
-  const author = 'Jimmy Dean';
+  const getRandomQuote = (quotes) => {
+    return quotes[(Math.floor(Math.random() * quotes.length))]
+  };
+  const { quote, author } = getRandomQuote(quotes);
 
   const color = 'red-900';
   const backgroundColor = `bg-${color}`;
