@@ -46,7 +46,19 @@ function App() {
           </figure>
           <div className="flex justify-between">
             <a
-              className="rounded-lg p-3 bg-red-900 text-neutral-50 shadow-sm shadow-red-900 cursor-pointer hover:bg-red-950 focus:bg-red-950 active:bg-neutral-50 active:text-red-950"
+              className="
+                rounded-lg
+                p-3
+                bg-red-900
+                text-neutral-50
+                shadow-sm shadow-red-900
+                cursor-pointer
+                hover:bg-red-950
+                focus:bg-red-950
+                active:bg-neutral-50
+                active:text-red-950
+                transition-colors
+              "
               id="tweet-quote"
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(quote)}`}
               target="_blank"
@@ -70,6 +82,7 @@ function App() {
                 focus:bg-red-950
                 active:bg-neutral-50
                 active:text-red-950
+                transition-colors
               "
               id="new-quote"
               type="button"
