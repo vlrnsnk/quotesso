@@ -58,6 +58,7 @@ function App() {
                 active:bg-neutral-50
                 active:text-red-950
                 transition-colors
+                motion-reduce:transition-none
               "
               id="tweet-quote"
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(quote)}`}
@@ -83,6 +84,7 @@ function App() {
                 active:bg-neutral-50
                 active:text-red-950
                 transition-colors
+                motion-reduce:transition-none
               "
               id="new-quote"
               type="button"
