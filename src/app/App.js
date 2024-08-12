@@ -7,14 +7,13 @@ function App() {
   const getRandomQuote = (quotes) => {
     return quotes[(Math.floor(Math.random() * quotes.length))]
   };
+
   const { quote, author } = getRandomQuote(quotes);
 
-  const color = 'red-900';
-  const backgroundColor = `bg-${color}`;
-  const textColor = `text-${color}`;
-
+  const color = '#7f1d1d';
+  
   return (
-    <div className={`${textColor} ${backgroundColor} px-4`}>
+    <div className="px-4" style={{ backgroundColor: color }}>
       <div
         className="
           h-screen
