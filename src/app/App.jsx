@@ -1,11 +1,11 @@
 import './App.css';
-import { ReactComponent as TwitterIcon } from '../assets/twitter.svg';
 
 import { quotes } from '../mocks/quotes';
 import { Footer } from '../components/Footer/Footer';
 import { Quote } from '../components/Quote/Quote';
 import { ButtonTwitter } from '../components/ButtonTwitter/ButtonTwitter';
 import { ButtonQuotesso } from '../components/ButtonQuotesso/ButtonQuotesso';
+import { QuoteBox } from '../components/QuoteBox/QuoteBox';
 
 function App() {
   const getRandomQuote = (quotes) => {
@@ -18,18 +18,7 @@ function App() {
 
   return (
     <div className="px-4" style={{ backgroundColor: color }}>
-      <div
-        className="
-          h-screen
-          mx-auto
-          container
-          flex
-          flex-col
-          justify-center
-          items-center
-        "
-        id="quote-box"
-      >
+      <QuoteBox>
         <div className="
           bg-neutral-50
           rounded-md
@@ -45,7 +34,7 @@ function App() {
           </div>
         </div>
         <Footer />
-      </div>
+        </QuoteBox>
     </div>
   );
 }
