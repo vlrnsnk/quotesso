@@ -2,6 +2,7 @@ import './App.css';
 import { ReactComponent as TwitterIcon } from '../assets/twitter.svg';
 import { ReactComponent as QuoteMark } from '../assets/quote.svg';
 import { quotes } from '../mocks/quotes';
+import { Footer } from '../components/Footer/Footer';
 
 function App() {
   const getRandomQuote = (quotes) => {
@@ -96,9 +97,7 @@ function App() {
             </button>
           </div>
         </div>
-        <footer className="text-neutral-50 underline">
-          by <a href="https://github.com/vlrnsnk" target="_blank" rel="noopener noreferrer">vlrnsnk</a>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
