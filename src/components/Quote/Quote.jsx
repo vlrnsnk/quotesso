@@ -11,7 +11,7 @@ const Quote = ({ quote, author }) => {
         </div>
       </blockquote>
       <figcaption>
-        <cite id="author" className="block text-right text-xl md:text-2xl lg:text-3xl ">{`- ${author}`}</cite>
+        <cite id="author" className="block text-right text-xl md:text-2xl lg:text-3xl">{`- ${author}`}</cite>
       </figcaption>
     </figure>
   );
