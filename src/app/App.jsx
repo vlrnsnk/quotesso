@@ -1,6 +1,7 @@
 import './App.css';
 
 import { quotes } from '../mocks/quotes';
+import { colors } from '../data/colors';
 import { Footer } from '../components/Footer/Footer';
 import { QuoteBox } from '../components/QuoteBox/QuoteBox';
 import { PageWrapper } from '../layout/PageWrapper/PageWrapper';
@@ -13,12 +14,12 @@ function App() {
 
   const { quote, author } = getRandomQuote(quotes);
 
-  const backgroundColor = '#7f1d1d';
+  const { lightColor, darkColor } = colors[1];
 
   return (
-    <PageWrapper backgroundColor={backgroundColor}>
+    <PageWrapper backgroundColor={darkColor}>
       <QuoteWrapper>
-        <QuoteBox quote={quote} author={author} />
+        <QuoteBox quote={quote} author={author} color={darkColor} backgroundColor={lightColor} />
         <Footer />
         </QuoteWrapper>
     </PageWrapper>
