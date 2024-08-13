@@ -2,19 +2,16 @@ import './App.css';
 
 import { quotes } from '../mocks/quotes';
 import { colors } from '../data/colors';
+import { getRandomArrayItem } from '../utilities';
+
 import { Footer } from '../components/Footer/Footer';
 import { QuoteBox } from '../components/QuoteBox/QuoteBox';
 import { PageWrapper } from '../layout/PageWrapper/PageWrapper';
 import { QuoteWrapper } from '../layout/QuoteWrapper/QuoteWrapper';
 
 function App() {
-  const getRandomQuote = (quotes) => {
-    return quotes[(Math.floor(Math.random() * quotes.length))]
-  };
-
-  const { quote, author } = getRandomQuote(quotes);
-
-  const { lightColor, darkColor } = colors[1];
+  const { quote, author } = getRandomArrayItem(quotes);
+  const { lightColor, darkColor } = getRandomArrayItem(colors);
 
   return (
     <PageWrapper backgroundColor={darkColor}>
