@@ -27,6 +27,11 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    const { lightColor, darkColor, darkestColor } = colors[0];
+
+    dispatch(setLightColor(lightColor));
+    dispatch(setDarkColor(darkColor));
+    dispatch(setDarkestColor(darkestColor));
     getNewQuote();
   }, []);
 
