@@ -12,6 +12,9 @@ import { QuoteWrapper } from 'layout/QuoteWrapper/QuoteWrapper';
 function App() {
   const { quote, author } = getRandomArrayItem(quotes);
   const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
+  const getNewQuote = () => {
+    console.log('clicked');
+  };
 
   return (
     <PageWrapper backgroundColor={darkColor}>
@@ -22,6 +25,7 @@ function App() {
           color={darkColor}
           backgroundColor={lightColor}
           highlightColor={darkestColor}
+          handleClick={getNewQuote}
         />
         <Footer />
         </QuoteWrapper>

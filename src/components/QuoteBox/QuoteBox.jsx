@@ -2,7 +2,14 @@ import { Quote } from 'components/Quote/Quote';
 import { ButtonTwitter } from 'components/ButtonTwitter/ButtonTwitter';
 import { ButtonQuotesso } from 'components/ButtonQuotesso/ButtonQuotesso';
 
-const QuoteBox = ({ quote, author, color, backgroundColor, highlightColor }) => {
+const QuoteBox = ({
+  quote,
+  author,
+  color,
+  backgroundColor,
+  highlightColor,
+  handleClick,
+}) => {
   return (
     <div
       className="rounded-md
@@ -22,11 +29,13 @@ const QuoteBox = ({ quote, author, color, backgroundColor, highlightColor }) => 
           color={color}
           backgroundColor={backgroundColor}
           highlightColor={highlightColor}
+          handleClick={() => {}}
         />
         <ButtonQuotesso
           color={color}
           backgroundColor={backgroundColor}
           highlightColor={highlightColor}
+          handleClick={handleClick}
         />
       </div>
     </div>

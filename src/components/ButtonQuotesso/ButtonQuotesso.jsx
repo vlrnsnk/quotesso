@@ -1,6 +1,6 @@
 import { Button } from "components/Button/Button";
 
-const ButtonQuotesso = ({ color, backgroundColor, highlightColor }) => {
+const ButtonQuotesso = ({ color, backgroundColor, highlightColor, handleClick }) => {
   return (
     <Button
       classes="px-4
@@ -15,6 +15,7 @@ const ButtonQuotesso = ({ color, backgroundColor, highlightColor }) => {
       color={color}
       backgroundColor={backgroundColor}
       highlightColor={highlightColor}
+      handleClick={handleClick}
     >
       Quotesso!
     </Button>

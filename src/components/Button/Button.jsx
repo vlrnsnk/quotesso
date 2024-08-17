@@ -8,6 +8,7 @@ const Button = ({
   color,
   backgroundColor,
   highlightColor,
+  handleClick,
   attributes,
   children,
 }) => {
@@ -45,6 +46,7 @@ const Button = ({
         setTimeout(() => {
           setIsActive(false);
         }, 150);
+        handleClick();
       }}
     >
       {children}
