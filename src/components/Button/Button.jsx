@@ -9,6 +9,7 @@ const Button = ({
   backgroundColor,
   highlightColor,
   handleClick,
+  isLoading,
   attributes,
   children,
 }) => {
@@ -18,7 +19,7 @@ const Button = ({
 
   return (
     <ButtonAs
-      className={`rounded-lg transition-colors motion-reduce:transition-none ${classes}`}
+      className={`rounded-lg disabled:opacity-75 transition-colors motion-reduce:transition-none ${classes}${isLoading ? ' cursor-wait' : ''}`}
       id={id}
       title={title}
       style={{
@@ -26,6 +27,7 @@ const Button = ({
         backgroundColor: isActive ? backgroundColor : (isHovered ? highlightColor : color),
         boxShadow: `0 4px 6px -1px rgb(from ${isHovered ? highlightColor : color} r g b / 0.3), 0 2px 4px -2px rgb(from ${isHovered ? highlightColor : color} r g b / 0.3)`
       }}
+      disabled={isLoading}
       {...attributes}
       onMouseEnter={() => {
         setIsHovered(true);

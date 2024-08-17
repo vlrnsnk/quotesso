@@ -10,6 +10,7 @@ const QuoteBox = ({
   highlightColor,
   opacity,
   handleClick,
+  isLoading,
 }) => {
   return (
     <div
@@ -33,12 +34,14 @@ const QuoteBox = ({
           backgroundColor={backgroundColor}
           highlightColor={highlightColor}
           handleClick={() => {}}
+          isLoading={isLoading}
         />
         <ButtonQuotesso
           color={color}
           backgroundColor={backgroundColor}
           highlightColor={highlightColor}
           handleClick={handleClick}
+          isLoading={isLoading}
         />
       </div>
     </div>

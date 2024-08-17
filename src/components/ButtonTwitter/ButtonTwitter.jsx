@@ -7,13 +7,14 @@ const ButtonTwitter = ({
   color,
   backgroundColor,
   highlightColor,
-  handleClick
+  handleClick,
+  isLoading,
 }) => {
   return (
     <Button
       buttonAs="a"
-      classes="p-3
-        cursor-pointer"
+      classes={`p-3
+        cursor-pointer${isLoading ? ' opacity-75 cursor-wait' : ''}`}
       id="tweet-quote"
       title="Tweet this quote"
       attributes={{
@@ -25,6 +26,7 @@ const ButtonTwitter = ({
       backgroundColor={backgroundColor}
       highlightColor={highlightColor}
       handleClick={handleClick}
+      isLoading={isLoading}
     >
      <TwitterIcon />
     </Button>

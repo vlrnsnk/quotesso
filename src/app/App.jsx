@@ -19,6 +19,7 @@ import axios from 'axios';
 
 function App() {
   const [quoteOpacity, setQuoteOpacity] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   const quote = useSelector((state) => state.quote.value);
   const author = useSelector((state) => state.author.value);
@@ -28,6 +29,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    setIsLoading(true);
     const { lightColor, darkColor, darkestColor } = colors[0];
 
     dispatch(setLightColor(lightColor));
@@ -38,6 +40,7 @@ function App() {
   }, []);
 
   const getNewQuote = () => {
+    setIsLoading(true);
     setQuoteOpacity(0);
     let content = '';
     let author = '';
@@ -63,6 +66,7 @@ function App() {
 
     setTimeout(() => {
       setQuoteOpacity(1);
+      setIsLoading(false);
     }, 1000);
   };
 
@@ -77,6 +81,7 @@ function App() {
           highlightColor={darkestColor}
           opacity={quoteOpacity}
           handleClick={getNewQuote}
+          isLoading={isLoading}
         />
         <Footer />
         </QuoteWrapper>
