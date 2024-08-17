@@ -1,4 +1,4 @@
-import { ReactComponent as QuoteMark } from '../../assets/quote.svg';
+import { ReactComponent as QuoteMark } from 'assets/quote.svg';
 
 const Quote = ({ quote, author, color }) => {
   return (

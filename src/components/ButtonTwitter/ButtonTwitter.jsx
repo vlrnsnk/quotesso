@@ -1,5 +1,5 @@
-import { Button } from "../Button/Button";
-import { ReactComponent as TwitterIcon } from '../../assets/twitter.svg';
+import { Button } from "components/Button/Button";
+import { ReactComponent as TwitterIcon } from 'assets/twitter.svg';
 
 const ButtonTwitter = ({ quote, color, backgroundColor, highlightColor }) => {
   return (

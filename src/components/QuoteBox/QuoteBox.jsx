@@ -1,6 +1,6 @@
-import { Quote } from '../../components/Quote/Quote';
-import { ButtonTwitter } from '../../components/ButtonTwitter/ButtonTwitter';
-import { ButtonQuotesso } from '../../components/ButtonQuotesso/ButtonQuotesso';
+import { Quote } from 'components/Quote/Quote';
+import { ButtonTwitter } from 'components/ButtonTwitter/ButtonTwitter';
+import { ButtonQuotesso } from 'components/ButtonQuotesso/ButtonQuotesso';
 
 const QuoteBox = ({ quote, author, color, backgroundColor, highlightColor }) => {
   return (
