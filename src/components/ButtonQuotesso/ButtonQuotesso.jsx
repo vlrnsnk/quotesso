@@ -1,6 +1,6 @@
 import { Button } from "../Button/Button";
 
-const ButtonQuotesso = () => {
+const ButtonQuotesso = ({ color, backgroundColor }) => {
   return (
     <Button
       classes="px-4
@@ -12,6 +12,8 @@ const ButtonQuotesso = () => {
       attributes={{
         type: "button",
       }}
+      color={color}
+      backgroundColor={backgroundColor}
     >
       Quotesso!
     </Button>

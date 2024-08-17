@@ -1,9 +1,10 @@
 import { Button } from "../Button/Button";
 import { ReactComponent as TwitterIcon } from '../../assets/twitter.svg';
 
-const ButtonTwitter = ({ quote }) => {
+const ButtonTwitter = ({ quote, color, backgroundColor }) => {
   return (
     <Button
+      buttonAs="a"
       classes="p-3
         cursor-pointer"
       id="tweet-quote"
@@ -13,7 +14,8 @@ const ButtonTwitter = ({ quote }) => {
         target: "_blank",
         rel: "noopener noreferrer"
       }}
-      buttonAs="a"
+      color={color}
+      backgroundColor={backgroundColor}
     >
      <TwitterIcon />
     </Button>

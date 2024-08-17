@@ -15,8 +15,8 @@ const QuoteBox = ({ quote, author, color, backgroundColor }) => {
     >
       <Quote quote={quote} author={author} color={color} />
       <div className="flex justify-between">
-        <ButtonTwitter quote={quote} />
-        <ButtonQuotesso />
+        <ButtonTwitter quote={quote} color={color} backgroundColor={backgroundColor} />
+        <ButtonQuotesso color={color} backgroundColor={backgroundColor} />
       </div>
     </div>
   );
