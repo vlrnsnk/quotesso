@@ -1,6 +1,5 @@
 import './App.css';
 
-import { quotes } from '../mocks/quotes';
 import { colors } from '../data/colors';
 import { getRandomArrayItem } from '../utilities';
 
@@ -15,6 +14,7 @@ import { setAuthor } from 'features/author/authorSlice';
 import { setLightColor } from 'features/lightColor/lightColorSlice';
 import { setDarkColor } from 'features/darkColor/darkColorSlice';
 import { setDarkestColor } from 'features/darkestColor/darkestColorSlice';
+
 import axios from 'axios';
 
 function App() {
