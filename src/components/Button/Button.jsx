@@ -34,6 +34,8 @@ const Button = ({
       {...attributes}
       onClick={() => {
         setIsActive(true);
+
+        // 150ms is the default transition duration of tailwind css
         setTimeout(() => {
           setIsActive(false);
         }, 150);
