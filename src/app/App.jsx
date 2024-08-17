@@ -9,6 +9,8 @@ import { QuoteBox } from 'components/QuoteBox/QuoteBox';
 import { PageWrapper } from 'layout/PageWrapper/PageWrapper';
 import { QuoteWrapper } from 'layout/QuoteWrapper/QuoteWrapper';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { set } from 'features/quote/quoteSlice';
 
 function App() {
   const [quote, setQuote] = useState('');
@@ -17,6 +19,9 @@ function App() {
   const [darkColor, setDarkColor] = useState('');
   const [darkestColor, setDarkestColor] = useState('');
   const [quoteOpacity, setQuoteOpacity] = useState(1);
+
+  const quoteRedux = useSelector((state) => state.quote.value);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     getNewQuote();
@@ -28,14 +33,15 @@ function App() {
     setTimeout(() => {
       const { quote, author } = getRandomArrayItem(quotes);
 
-    setQuote(quote);
-    setAuthor(author);
+      dispatch(set(`REDUX ${quote}`));
+      setQuote(quote);
+      setAuthor(author);
 
-    const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
+      const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
 
-    setLightColor(lightColor);
-    setDarkColor(darkColor);
-    setDarkestColor(darkestColor);
+      setLightColor(lightColor);
+      setDarkColor(darkColor);
+      setDarkestColor(darkestColor);
     }, 1000);
 
     setTimeout(() => {
@@ -47,7 +53,8 @@ function App() {
     <PageWrapper backgroundColor={darkColor}>
       <QuoteWrapper>
         <QuoteBox
-          quote={quote}
+          // quote={quote}
+          quote={quoteRedux}
           author={author}
           color={darkColor}
           backgroundColor={lightColor}
