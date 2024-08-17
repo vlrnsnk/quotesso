@@ -12,17 +12,18 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setQuote } from 'features/quote/quoteSlice';
 import { setAuthor } from 'features/author/authorSlice';
+import { setLightColor } from 'features/lightColor/lightColorSlice';
+import { setDarkColor } from 'features/darkColor/darkColorSlice';
+import { setDarkestColor } from 'features/darkestColor/darkestColorSlice';
 
 function App() {
-  // const [quote, setQuote] = useState('');
-  // const [author, setAuthor] = useState('');
-  const [lightColor, setLightColor] = useState('');
-  const [darkColor, setDarkColor] = useState('');
-  const [darkestColor, setDarkestColor] = useState('');
   const [quoteOpacity, setQuoteOpacity] = useState(1);
 
-  const quoteRedux = useSelector((state) => state.quote.value);
-  const authorRedux = useSelector((state) => state.author.value);
+  const quote = useSelector((state) => state.quote.value);
+  const author = useSelector((state) => state.author.value);
+  const lightColor = useSelector((state) => state.lightColor.value);
+  const darkColor = useSelector((state) => state.darkColor.value);
+  const darkestColor = useSelector((state) => state.darkestColor.value);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -35,16 +36,14 @@ function App() {
     setTimeout(() => {
       const { quote, author } = getRandomArrayItem(quotes);
 
-      dispatch(setQuote(`REDUX ${quote}`));
-      dispatch(setAuthor(`REDUX ${author}`));
-      // setQuote(quote);
-      // setAuthor(author);
+      dispatch(setQuote(quote));
+      dispatch(setAuthor(author));
 
       const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
 
-      setLightColor(lightColor);
-      setDarkColor(darkColor);
-      setDarkestColor(darkestColor);
+      dispatch(setLightColor(lightColor));
+      dispatch(setDarkColor(darkColor));
+      dispatch(setDarkestColor(darkestColor));
     }, 1000);
 
     setTimeout(() => {
@@ -56,10 +55,8 @@ function App() {
     <PageWrapper backgroundColor={darkColor}>
       <QuoteWrapper>
         <QuoteBox
-          // quote={quote}
-          quote={quoteRedux}
-          // author={author}
-          author={authorRedux}
+          quote={quote}
+          author={author}
           color={darkColor}
           backgroundColor={lightColor}
           highlightColor={darkestColor}
