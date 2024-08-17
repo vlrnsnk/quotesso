@@ -16,13 +16,17 @@ function App() {
   const [lightColor, setLightColor] = useState('');
   const [darkColor, setDarkColor] = useState('');
   const [darkestColor, setDarkestColor] = useState('');
+  const [quoteOpacity, setQuoteOpacity] = useState(1);
 
   useEffect(() => {
     getNewQuote();
   }, []);
 
   const getNewQuote = () => {
-    const { quote, author } = getRandomArrayItem(quotes);
+    setQuoteOpacity(0);
+
+    setTimeout(() => {
+      const { quote, author } = getRandomArrayItem(quotes);
 
     setQuote(quote);
     setAuthor(author);
@@ -32,6 +36,11 @@ function App() {
     setLightColor(lightColor);
     setDarkColor(darkColor);
     setDarkestColor(darkestColor);
+    }, 1000);
+
+    setTimeout(() => {
+      setQuoteOpacity(1);
+    }, 1000);
   };
 
   return (
@@ -43,6 +52,7 @@ function App() {
           color={darkColor}
           backgroundColor={lightColor}
           highlightColor={darkestColor}
+          opacity={quoteOpacity}
           handleClick={getNewQuote}
         />
         <Footer />

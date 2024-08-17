@@ -1,8 +1,8 @@
 import { ReactComponent as QuoteMark } from 'assets/quote.svg';
 
-const Quote = ({ quote, author, color }) => {
+const Quote = ({ quote, author, color, opacity }) => {
   return (
-    <figure className="mb-10" style={{ color: color }}>
+    <figure className="mb-10 transition-opacity duration-1000" style={{ color: color, opacity: opacity }}>
       <blockquote className="mb-4" id="text">
         <div className="mb-2 text-3xl md:text-4xl lg:text-5xl font-bold">
           <QuoteMark />
