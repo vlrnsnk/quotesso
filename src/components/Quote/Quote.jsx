@@ -15,7 +15,7 @@ const Quote = ({ quote, author, color, opacity }) => {
           className="block text-right text-xl md:text-2xl lg:text-3xl"
           id="author"
         >
-          {`- ${author}`}
+          {author ? `- ${author}` : ''}
         </cite>
       </figcaption>
     </figure>

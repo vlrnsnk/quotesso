@@ -45,6 +45,7 @@ function App() {
     .then((response) => {
       ({ content, author } = response.data[0]);
     }).catch((error) => {
+      content = 'There was an error loading a quote. Please, try again later.'
       console.log(error);
     });
 
