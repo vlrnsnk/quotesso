@@ -8,12 +8,30 @@ import { Footer } from 'components/Footer/Footer';
 import { QuoteBox } from 'components/QuoteBox/QuoteBox';
 import { PageWrapper } from 'layout/PageWrapper/PageWrapper';
 import { QuoteWrapper } from 'layout/QuoteWrapper/QuoteWrapper';
+import { useEffect, useState } from 'react';
 
 function App() {
-  const { quote, author } = getRandomArrayItem(quotes);
-  const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
+  const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState('');
+  const [lightColor, setLightColor] = useState('');
+  const [darkColor, setDarkColor] = useState('');
+  const [darkestColor, setDarkestColor] = useState('');
+
+  useEffect(() => {
+    getNewQuote();
+  }, []);
+
   const getNewQuote = () => {
-    console.log('clicked');
+    const { quote, author } = getRandomArrayItem(quotes);
+
+    setQuote(quote);
+    setAuthor(author);
+
+    const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
+
+    setLightColor(lightColor);
+    setDarkColor(darkColor);
+    setDarkestColor(darkestColor);
   };
 
   return (
