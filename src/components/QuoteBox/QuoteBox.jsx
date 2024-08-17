@@ -28,6 +28,7 @@ const QuoteBox = ({
       <div className="flex justify-between">
         <ButtonTwitter
           quote={quote}
+          author={author}
           color={color}
           backgroundColor={backgroundColor}
           highlightColor={highlightColor}

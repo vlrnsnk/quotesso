@@ -1,7 +1,14 @@
 import { Button } from "components/Button/Button";
 import { ReactComponent as TwitterIcon } from 'assets/twitter.svg';
 
-const ButtonTwitter = ({ quote, color, backgroundColor, highlightColor, handleClick }) => {
+const ButtonTwitter = ({
+  quote,
+  author,
+  color,
+  backgroundColor,
+  highlightColor,
+  handleClick
+}) => {
   return (
     <Button
       buttonAs="a"
@@ -10,7 +17,7 @@ const ButtonTwitter = ({ quote, color, backgroundColor, highlightColor, handleCl
       id="tweet-quote"
       title="Tweet this quote"
       attributes={{
-        href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(quote)}`,
+        href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${quote} - ${author}`)}`,
         target: "_blank",
         rel: "noopener noreferrer"
       }}
