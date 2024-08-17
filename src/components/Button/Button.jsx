@@ -22,7 +22,7 @@ const Button = ({
       style={{
         color: backgroundColor,
         backgroundColor: isHovered ? highlightColor : color,
-        boxShadow: `0 4px 6px -1px rgb(from ${color} r g b / 0.3), 0 2px 4px -2px rgb(from ${color} r g b / 0.3)`
+        boxShadow: `0 4px 6px -1px rgb(from ${isHovered ? highlightColor : color} r g b / 0.3), 0 2px 4px -2px rgb(from ${isHovered ? highlightColor : color} r g b / 0.3)`
       }}
       onMouseEnter={() => {
         setIsHovered(true);
