@@ -15,6 +15,7 @@ import { setAuthor } from 'features/author/authorSlice';
 import { setLightColor } from 'features/lightColor/lightColorSlice';
 import { setDarkColor } from 'features/darkColor/darkColorSlice';
 import { setDarkestColor } from 'features/darkestColor/darkestColorSlice';
+import axios from 'axios';
 
 function App() {
   const [quoteOpacity, setQuoteOpacity] = useState(1);
@@ -37,11 +38,18 @@ function App() {
 
   const getNewQuote = () => {
     setQuoteOpacity(0);
+    let content = '';
+    let author = '';
+
+    axios.get('https://api.quotable.io/quotes/random')
+    .then((response) => {
+      ({ content, author } = response.data[0]);
+    }).catch((error) => {
+      console.log(error);
+    });
 
     setTimeout(() => {
-      const { quote, author } = getRandomArrayItem(quotes);
-
-      dispatch(setQuote(quote));
+      dispatch(setQuote(content));
       dispatch(setAuthor(author));
 
       const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
