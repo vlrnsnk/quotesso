@@ -2,7 +2,7 @@ import { Quote } from '../../components/Quote/Quote';
 import { ButtonTwitter } from '../../components/ButtonTwitter/ButtonTwitter';
 import { ButtonQuotesso } from '../../components/ButtonQuotesso/ButtonQuotesso';
 
-const QuoteBox = ({ quote, author, color, backgroundColor }) => {
+const QuoteBox = ({ quote, author, color, backgroundColor, highlightColor }) => {
   return (
     <div
       className="rounded-md
@@ -15,8 +15,17 @@ const QuoteBox = ({ quote, author, color, backgroundColor }) => {
     >
       <Quote quote={quote} author={author} color={color} />
       <div className="flex justify-between">
-        <ButtonTwitter quote={quote} color={color} backgroundColor={backgroundColor} />
-        <ButtonQuotesso color={color} backgroundColor={backgroundColor} />
+        <ButtonTwitter
+          quote={quote}
+          color={color}
+          backgroundColor={backgroundColor}
+          highlightColor={highlightColor}
+        />
+        <ButtonQuotesso
+          color={color}
+          backgroundColor={backgroundColor}
+          highlightColor={highlightColor}
+        />
       </div>
     </div>
   );

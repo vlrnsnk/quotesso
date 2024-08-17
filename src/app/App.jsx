@@ -11,12 +11,18 @@ import { QuoteWrapper } from '../layout/QuoteWrapper/QuoteWrapper';
 
 function App() {
   const { quote, author } = getRandomArrayItem(quotes);
-  const { lightColor, darkColor } = getRandomArrayItem(colors);
+  const { lightColor, darkColor, darkestColor } = getRandomArrayItem(colors);
 
   return (
     <PageWrapper backgroundColor={darkColor}>
       <QuoteWrapper>
-        <QuoteBox quote={quote} author={author} color={darkColor} backgroundColor={lightColor} />
+        <QuoteBox
+          quote={quote}
+          author={author}
+          color={darkColor}
+          backgroundColor={lightColor}
+          highlightColor={darkestColor}
+        />
         <Footer />
         </QuoteWrapper>
     </PageWrapper>

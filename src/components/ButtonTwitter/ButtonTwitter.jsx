@@ -1,7 +1,7 @@
 import { Button } from "../Button/Button";
 import { ReactComponent as TwitterIcon } from '../../assets/twitter.svg';
 
-const ButtonTwitter = ({ quote, color, backgroundColor }) => {
+const ButtonTwitter = ({ quote, color, backgroundColor, highlightColor }) => {
   return (
     <Button
       buttonAs="a"
@@ -16,6 +16,7 @@ const ButtonTwitter = ({ quote, color, backgroundColor }) => {
       }}
       color={color}
       backgroundColor={backgroundColor}
+      highlightColor={highlightColor}
     >
      <TwitterIcon />
     </Button>
