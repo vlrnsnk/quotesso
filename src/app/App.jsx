@@ -34,6 +34,7 @@ function App() {
     dispatch(setDarkColor(darkColor));
     dispatch(setDarkestColor(darkestColor));
     getNewQuote();
+    // eslint-disable-next-line
   }, []);
 
   const getNewQuote = () => {
