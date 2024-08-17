@@ -1,11 +1,11 @@
 const QuoteWrapper = ({ children }) => {
   return (<div
-    className="h-screen
+    className="h-full
+      py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 2xl:py-14
       mx-auto
       container
       flex
       flex-col
-      justify-center
       items-center"
   >
     {children}
