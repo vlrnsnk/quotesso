@@ -6,12 +6,12 @@ export const quoteSlice = createSlice({
     value: '',
   },
   reducers: {
-    set: (state, action) => {
+    setQuote: (state, action) => {
       state.value = action.payload;
     },
   },
 });
 
-export const { set } = quoteSlice.actions;
+export const { setQuote } = quoteSlice.actions;
 
 export default quoteSlice.reducer;
