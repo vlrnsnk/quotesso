@@ -1,6 +1,6 @@
 # Quotesso - Random Quote Machine
 
-Quotesso is a simple and elegant web application that allows users to get inspired by random quotes with a single click. The app was bootstrapped with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html) and utilizes [Tailwind CSS](https://tailwindcss.com/) for styling and [Redux](https://redux.js.org/) for state management. Each new quote comes with a refreshing color change to enhance the user experience, and users can easily tweet their favorite quotes directly from the app.
+Quotesso is a simple and elegant web application that allows users to get inspired by random quotes with a single click. The app was bootstrapped with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html), and it utilizes [Tailwind CSS](https://tailwindcss.com/) for styling and [Redux](https://redux.js.org/) for state management. Each new quote comes with a refreshing color change to enhance the user experience, and users can easily tweet their favorite quotes directly from the app.
 
 ## Table of Contents
 
@@ -17,14 +17,14 @@ Quotesso is a simple and elegant web application that allows users to get inspir
 
 ## Features
 
-- **Random Quote**: Get inspired with a random quote at the click of a button.
+- **Random Quote**: Get inspired by a random quote at the click of a button.
 - **Dynamic Color Change**: The background and button colors change with each new quote.
 - **Tweet a Quote**: Share your favorite quotes on Twitter with a single click.
 - **Responsive Design**: Fully responsive design powered by Tailwind CSS, ensuring a seamless experience on all devices.
 
 ## Demo
 
-Check out the live demo: [Quotesso](https://vlrnsnk.github.io/quotesso/)
+Check out the live demo deployed to the GitHub Pages: [Quotesso](https://vlrnsnk.github.io/quotesso/)
 
 ## Technologies Used
 
