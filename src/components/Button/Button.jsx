@@ -19,7 +19,11 @@ const Button = ({
 
   return (
     <ButtonAs
-      className={`rounded-lg disabled:opacity-75 transition-colors motion-reduce:transition-none ${classes}${isLoading ? ' cursor-wait' : ''}`}
+      className={`rounded-lg
+        disabled:opacity-75
+        transition-colors
+        motion-reduce:transition-none
+        ${classes}${isLoading ? ' cursor-wait' : ''}`}
       id={id}
       title={title}
       style={{
@@ -42,6 +46,7 @@ const Button = ({
         setIsHovered(false);
       }}
       onClick={() => {
+        setIsHovered(false);
         setIsActive(true);
 
         // 150ms is the default transition duration of tailwind css
