@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/quotesso/static/css/main.16d0bd56.css",
-    "main.js": "/quotesso/static/js/main.41bb448e.js",
+    "main.js": "/quotesso/static/js/main.d1409650.js",
     "index.html": "/quotesso/index.html",
     "static/media/twitter.svg": "/quotesso/static/media/twitter.4d33cc6953f5aaab049616ad2e585b11.svg",
     "static/media/quote.svg": "/quotesso/static/media/quote.4854324a73a4f64c8c969491eb347ffa.svg",
     "main.16d0bd56.css.map": "/quotesso/static/css/main.16d0bd56.css.map",
-    "main.41bb448e.js.map": "/quotesso/static/js/main.41bb448e.js.map"
+    "main.d1409650.js.map": "/quotesso/static/js/main.d1409650.js.map"
   },
   "entrypoints": [
     "static/css/main.16d0bd56.css",
-    "static/js/main.41bb448e.js"
+    "static/js/main.d1409650.js"
   ]
 }
