@@ -31,7 +31,7 @@ Check out the live demo deployed to the GitHub Pages: [Quotesso](https://vlrnsnk
 - **React**: Bootstrapped with Create React App for fast and easy setup.
 - **Tailwind CSS**: Utilized for rapid and responsive styling.
 - **Redux**: Manages the state of quotes and colors efficiently.
-- **Quotable API**: Fetches random quotes from the [Quotable API](https://github.com/lukePeavey/quotable).
+- **Quotable API**: Fetches random quotes from the [Quotes API](https://github.com/well300/quotes-api).
 - **Twitter API**: Enables users to tweet quotes directly from the app.
 
 ## Installation

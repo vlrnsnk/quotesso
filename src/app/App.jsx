@@ -45,9 +45,10 @@ function App() {
     let content = '';
     let author = '';
 
-    axios.get('http://api.quotable.io/quotes/random')
+    axios.get('https://quotes-api-self.vercel.app/quote')
     .then((response) => {
-      ({ content, author } = response.data[0]);
+      content = response.data.quote;
+      author = response.data.author;
     }).catch((error) => {
       content = 'There was an error loading a quote. Please, try again later.'
       console.log(error);
