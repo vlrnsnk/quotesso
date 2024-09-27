@@ -45,7 +45,7 @@ function App() {
     let content = '';
     let author = '';
 
-    axios.get('https://api.quotable.io/quotes/random')
+    axios.get('http://api.quotable.io/quotes/random')
     .then((response) => {
       ({ content, author } = response.data[0]);
     }).catch((error) => {
