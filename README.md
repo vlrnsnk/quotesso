@@ -91,6 +91,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Feel free to reach out to me with any questions or for collaborations.
 
-- Email: [vlrnsnk\@proton.me](mailto:vlrnsnk@proton.me?subject=Portfolio)
-- LinkedIn: [https://linkedin.com/in/valeriy-a-a23833310/](https://linkedin.com/in/valeriy-a-a23833310/)
+- Email: [vlrnsnk\@proton.me](mailto:vlrnsnk@proton.me?subject=Quotesso)
+- LinkedIn: [https://linkedin.com/in/valeriy-a-a23833310/](https://linkedin.com/in/vlrnsnk/)
 - GitHub: [https://github.com/vlrnsnk](https://github.com/vlrnsnk/)
